@@ -7,6 +7,6 @@ head
   meta(name="keywords", content="")
   meta(name="description", content="Bespoke web development and consultancy. Looking to create a new website or web application? Maybe you want to get a kickstart on that new project you've been thinking about? Look no further, contact hello@shiftbear.com")
   link(href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,100' rel='stylesheet' type='text/css')
-  link(rel="stylesheet", href=`css/${name}.css`)
+  link(rel="stylesheet", href=`css/${(env === 'dist') ? name + '.min' : name }.css`)
 body
   block content
