@@ -1,0 +1,4 @@
+/**
+  * no-op placeholder
+*/
+;(function(){}());
