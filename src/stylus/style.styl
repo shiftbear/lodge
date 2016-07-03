@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@keyframes fadeIn
+  from
+    opacity 0
+
 *
   box-sizing border-box
+  animation fadeIn .5s ease 0s
 
 body
   padding 0 0 0 0
   margin 0 0 0 0
   font-family 'Roboto', sans-serif;
   text-align center
-  background-color rgba(0, 0, 0, .75)
-  color #fafafa
+  background-color #eee
+  color #111
   padding 30px
 
 a
   text-decoration none
-  color #e74c3c
+  color #2eec71
+  cursor pointer
+
+p
+  font-size 1.25rem
 
 .banner
   margin 0
@@ -32,6 +43,7 @@ footer
   opacity .5
 
 #constructionLogo
+#logo
   max-width 30%
   margin 40px auto
   border 10px inset grey
@@ -39,9 +51,15 @@ footer
   overflow hidden
   position relative
   background linear-gradient(40deg, black, yellow)
-  @media(max-width 320px)
+  @media(max-width 768px)
     max-width 80%
     margin 20px auto
+
+#logo
+  border-color #fafafa
+  border-style solid
+  border-width 6px
+  background linear-gradient(0deg, #2eec71, transparent)
 
 #eyes
   transform-origin 425px 630px
