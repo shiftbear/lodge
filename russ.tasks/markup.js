@@ -15,8 +15,9 @@ module.exports = [
       glob(russ.config.paths.sources.docs, (err, files) => {
         for (const file of files) {
           try {
-            const data = russ.config.pluginOpts.pug.data,
-              markup = pug.compileFile(`${process.cwd()}/${file}`)(data),
+            const data = russ.config.pluginOpts.pug.data;
+            data.env = russ.env;
+            const markup = pug.compileFile(`${process.cwd()}/${file}`)(data),
               name = path.basename(file, '.pug'),
               loc = `${outputDir}${name}.html`;
             fs.writeFileSync(loc, markup);

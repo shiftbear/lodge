@@ -23,7 +23,6 @@ module.exports = [
         .render((err, css) => {
           mkdirp(path.dirname(outputPath), (err) => {
             if (err) russ.reject(err);
-            fs.writeFileSync(outputPath, css);
             if (russ.env === 'dist') {
               const nanoOpts = russ.config.pluginOpts.cssnano;
               outputPath = outputPath.replace('.css', '.min.css');
@@ -32,6 +31,8 @@ module.exports = [
                 .then(function(result) {
                   fs.writeFileSync(outputPath, result.css);
                 });
+            } else {
+              fs.writeFileSync(outputPath, css);
             }
             russ.resolve();
           });

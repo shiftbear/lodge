@@ -40,7 +40,7 @@ var pkg  = require('./package.json'),
         styles   : src + 'stylus/style.styl',
         scripts  : src + 'js/**/{greet,*}.js',
         docs     : src + 'pug/*.pug',
-        markup   : src + 'pug/**/*.pug',
+        markup   : src + 'pug/**/*.*',
         overwatch: 'public/**/*.*'
       },
       destinations: {

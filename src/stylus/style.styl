@@ -1,5 +1,3 @@
-@import 'base';
-
 *
   box-sizing border-box
 
@@ -8,30 +6,55 @@ body
   margin 0 0 0 0
   font-family 'Roboto', sans-serif;
   text-align center
-  background-color #111
   background-color rgba(0, 0, 0, .75)
+  color #fafafa
+  padding 30px
 
 a
   text-decoration none
   color #e74c3c
 
-.content
-  background-color #eee
-  padding 30px
+.banner
+  margin 0
+  padding 20px
+  font-size 2rem
+  text-transform uppercase
+  &__letter:nth-child(odd)
+    color yellow
+  &__letter:nth-child(even)
+    color grey
 
 footer
-  @media(max-width: 320px)
-    position fixed
-  color #fafafa
-  bottom 0
-  left 0
-  right 0
   font-weight 300
-  padding 30px 20px
+  padding 40px 20px
   text-align center
+  font-size .75rem
+  opacity .5
 
-img
-  max-width 50%
-  max-height 500px
-  max-height 80vh
+#constructionLogo
+  max-width 30%
   margin 40px auto
+  border 10px inset grey
+  border-radius 100%
+  overflow hidden
+  position relative
+  background linear-gradient(40deg, black, yellow)
+  @media(max-width 320px)
+    max-width 80%
+    margin 20px auto
+
+#eyes
+  transform-origin 425px 630px
+  animation blink 10s infinite linear
+
+@keyframes blink
+  9%
+    transform scaleY(1)
+  10%
+    transform scaleY(0)
+  11%
+    transform scaleY(1)
+  12%
+    transform scaleY(0)
+  13%
+    transform scaleY(1)
