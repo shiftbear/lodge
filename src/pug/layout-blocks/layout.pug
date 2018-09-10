@@ -1,11 +1,11 @@
 html(lang="en-us")
-head
-  meta(charset="utf-8")
-  meta(http-equiv="X-UA-Compatible", content="IE=edge")
-  title ShiftBear | Bespoke Web Development & Consultancy
-  meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1.0")
-  meta(name="keywords", content="")
-  meta(name="description", content="Bespoke web development and consultancy. Looking to create a new website or web application? Maybe you want to get a kickstart on that new project you've been thinking about? Look no further, contact hello@shiftbear.com")
-  link(rel="stylesheet", href=`css/${(env === 'dist') ? name + '.min' : name }.css`)
-body
-  block content
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title ShiftBear | Bespoke Web Development & Consultancy
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1.0")
+    meta(name="keywords", content="")
+    meta(name="description", content="Bespoke web development and consultancy. Looking to create a new website or web application? Maybe you want to get a kickstart on that new project you've been thinking about? Look no further, contact hello@shiftbear.com")
+    link(rel="stylesheet", href=`css/${(env === 'dist') ? name + '.min' : name }.css`)
+  body
+    block content
